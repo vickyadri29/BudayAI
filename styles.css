@@ -620,6 +620,10 @@ footer img{
         
     }
 
+    .features .card {
+        margin: 20px;
+    }
+
     .features .card img{
         height: 5rem;
     }
@@ -630,6 +634,7 @@ footer img{
 
     .features .card p {
         font-size: 0.6rem;
+        padding: 0;
     }
 
     #about-us {
