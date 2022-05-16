@@ -9,19 +9,33 @@
 </head>
 <body>
     <header>
-        <img src="./src/img/Our-Logo.png" alt="Logo">
-        <nav>
-            <ul>
-                <a href="#home"><li>Home</li></a>
-                <a href="#features-app"><li>Features</li></a>
-                <a href="#about-us"><li>About Us</li></a>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <img src="./src/img/Our-Logo.png" alt="Logo">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#features-app" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about-us" class="nav-link">About us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </header>
 
     <main id="container">
         <article id="home">
-            <div>
+            <div class="home-content">
                 <h2>INDONESIA</h2>
                 <p>Yuk explore lebih jauh <span>budaya</span> yang ada di <span>Indonesia!</span></p>
             </div>
@@ -71,11 +85,9 @@
         </div>
 
         <article id="about-us">
-            <div>
                 <h2>Tentang Kami</h2>
                 <hr>
                 <p>Dalam pembuatan aplikasi, kami memiliki 6 anggota tim, yaitu terdiri dari Mobile App Developer, Machine Learning Engineer, dan Cloud Engineer</p>
-            </div>
             <div class="team">
                 <div class="card card-one">
                     <div class="collect">
@@ -161,12 +173,12 @@
         </aside>
     </main>
 
+    <hr>
     <footer>
-        <hr>
-            <div class="copyright">
-            <h2>Copyright &copy; 2022, Team Project BudayAI</h2>
-            <img src="./src/img/Our-Logo.png" alt="Logo">
-        </div>
+        <h2>Copyright &copy; 2022, Team Project BudayAI</h2>
+        <img src="./src/img/Our-Logo.png" alt="Logo">
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>

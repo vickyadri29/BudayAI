@@ -5,9 +5,10 @@ html {
 }
   
 
-body {
+* {
     margin:0;
     padding:0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -15,12 +16,22 @@ header {
     position: -webkit-sticky;
     position:sticky;
     top: 0;
-    background-color: rgb(255, 255, 255);
-    padding: 1.1rem 4rem;
-    display:flex;
-    justify-content: space-between;
+    background-color: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+}
+
+.navbar {
+    min-height: 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 4rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
 }
 
 header img{
@@ -32,20 +43,31 @@ nav a{
     text-decoration: none;
     color: #34888D;
     font-weight: 500;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 nav a:hover {
     color: #00373A;
 }
 
-nav ul{
-    display: flex;
+nav ul li {
     list-style: none;
 }
 
-nav ul li {
-    margin-left: 30px;
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: #34888D;
+    border-radius: 20px;
 }
 
 #home {
@@ -56,17 +78,17 @@ nav ul li {
     flex-wrap: wrap;
 }
 
-#home div {
+#home .home-content {
     margin: auto 0;
 }
 
-#home div h2 {
+#home .home-content h2 {
     color: #34888D;
     font-size: 4.7rem;
     margin: 0;
 }
 
-#home div p {
+#home .home-content p {
     margin: 0;
     color: #3C3C3C;
     font-size: 1.8rem;
@@ -74,7 +96,7 @@ nav ul li {
     line-height: 2.5rem;
 }
 
-#home div p span {
+#home .home-content p span {
     color: #34888D;
 }
 
@@ -94,12 +116,14 @@ nav ul li {
 }
 
 #summary hr {
-    width: 23rem;
+    width: 23.4rem;
     border: 1px solid #34888D;
     border-radius: 22px;
+    margin: 0 auto;
 }
 
 #summary p {
+    padding: 2rem 4rem;
     color: #3C3C3C;
     font-size: 1.4rem;
 }
@@ -136,9 +160,11 @@ nav ul li {
     width: 16.5rem;
     border: 1px solid #34888D;
     border-radius: 22px;
+    margin: 0 auto;
 }
 
 #features-app > p {
+    padding: 2rem 4rem;
     color: #3C3C3C;
     font-size: 1.4rem;
 }
@@ -160,6 +186,7 @@ nav ul li {
 }
 
 .features .card p {
+    padding: 1rem 0;
     color: #3C3C3C;
     font-size: 1.2rem;
 }
@@ -180,9 +207,11 @@ nav ul li {
     width: 17.7rem;
     border: 1px solid #ffffff;
     border-radius: 22px;
+    margin: 0 auto;
 }
 
-#about-us p {
+#about-us > p {
+    margin: 2rem 4rem 0;
     font-size: 1.2rem;
 }
 
@@ -219,11 +248,13 @@ nav ul li {
 }
 
 #about-us .card p {
-    font-size: 1rem;
+    padding: 0.6rem 0 1.4rem;
+    font-size: 0.8rem;
     color: #3C3C3C;
 }
 
 #about-us .card button {
+    width: 200px;
     color: #FFFFFF;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
@@ -242,8 +273,7 @@ aside {
 }
 
 aside img {
-    width: 10%;
-    height: 10%;
+    height: 2rem;
 }
 
 aside .card ul{
@@ -252,7 +282,7 @@ aside .card ul{
 }
 
 aside .card h3 {
-    margin: 0;
+    margin-bottom:6px;
     color: #34888D;
     font-weight: 600;
 }
@@ -262,32 +292,32 @@ aside .card ul li {
 }
 
 aside .card img {
-    margin: 0.7rem 0;
-    width: 20%;
-    height: 19%;
+    margin: 0;
+    width: 23%;
+    height: 30%;
 }
 
 aside .card img:hover {
-  transition:.5s;
+  transition:0.3s ease;
   box-shadow: 2px 2px 5px #888888;
   border-radius: 50px;
 }
 
-footer .copyright {
+footer{
     padding: 1rem 4rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-footer .copyright h2 {
+footer h2 {
     color: #1a1a1a;
     font-weight: 500;
     font-size: 1rem;
 }
 
-footer .copyright img{
-    width: 10%;
-    height: 9%;
+footer img{
+   height: 2.5rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -311,7 +341,6 @@ footer .copyright img{
     }
 
     #home div p {
-        width: 600px;
         text-align: center;
         color: #3C3C3C;
         font-size: 1.3rem;
@@ -350,31 +379,288 @@ footer .copyright img{
 
     .team .card {
         margin: 2rem;
-        padding: 0 20px;
-        width: 230px;
-        height: 290px;
+        padding: 0 10px;
+        width: 240px;
+        height: 280px;
     }
 
-    .team .card h3 {
-        font-size: 1rem;
+    #about-us .card h3 {
+        font-size: 1.1rem;
     }
 
     #about-us .card p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     #about-us .card button {
-        color: #FFFFFF;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;   
+        width: 180px;
         font-size: 0.7rem;
-        border: 1px solid #34888D;
-        background: linear-gradient(262.88deg, #34888D 8.15%, #598AD9 97.79%);
-        border-radius: 70px 9px 9px 9px; 
-        cursor: pointer;   
     }
 }
 
 @media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #ffffff;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    header img {
+        margin: 0;
+        height: 2rem;
+    }
+
+    #home .home-content h2 {
+        font-size: 3rem;
+    }
+
+    #home img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #home .home-content {
+       margin: 0;
+       padding: 0;
+    }
+
+    #home .home-content p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    #summary h2, #features-app h2, #about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    #summary p, #features-app>p, #about-us p {
+        padding: 1rem;
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    #summary hr {
+        width: 16.7rem;
+    }
+
+    #features-app hr {
+        width: 12rem;
+    }
+
+    #about-us hr {
+        width: 12.7rem;
+    }
     
+    .features .card {
+        margin: 0 20px;
+        width: 1000px;
+    }
+
+    .features .card img {
+        height: 7.4rem;
+    }
+
+    .features .card p {
+        font-size: 0.7rem;
+    }
+
+    .team .card {
+        margin: 15px;
+        padding: 0 5px;
+        width: 170px;
+        height: 200px;
+    }
+
+    .team .card img {
+        margin-top: -10px;
+        height: 3rem;
+    }
+
+    #about-us .card h3 {
+        font-size: 0.7rem;
+    }
+
+    #about-us .card p {
+        padding: 5px 0 20px ;
+        font-size: 0.5rem;
+    }
+
+    #about-us .card button {
+        width: 120px;
+        font-size: 0.4rem;
+    }
+
+
+    aside .card h3{
+        font-size: 0.8rem;
+    }
+
+    aside .card ul{
+        margin: 1px 0;
+        font-size: 0.5rem;
+    }
+
+    footer h2 {
+        font-size: 0.8rem;
+    }
+
+    footer img {
+        height: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header img {
+        height: 1.5rem;
+    }
+
+    .navbar {
+        padding: 1.1rem 1.5rem;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    #home {
+        padding: 1.1rem 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #home img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #home .home-content {
+        
+        text-align: center;
+        margin: 0;
+    }
+
+    #home .home-content h2{
+        font-size: 1.5rem;
+    }
+
+    #home .home-content p {
+        width: 100%;
+        line-height: 1rem;
+        font-size: 0.6rem;
+    }
+
+    #summary h2, #features-app>h2, #about-us h2 {
+        font-size: 1.2rem;
+    }
+
+    #summary p, #features-app>p, #about-us p {
+        padding: 1rem;
+        margin: 0;
+        font-size: 0.48rem;
+    }
+
+    #summary {
+        padding: 1.1rem 1.5rem;
+    }
+
+    #summary hr {
+        width: 8rem;
+    }
+
+    #summary img {
+        width: 100%;
+    }
+
+    #features-app {
+        padding: 1.1rem 1.5rem;
+    }
+
+    #features-app hr {
+        width: 8rem;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        
+    }
+
+    .features .card img{
+        height: 5rem;
+    }
+
+    .features .card h3 {
+        font-size: 1rem;
+    }
+
+    .features .card p {
+        font-size: 0.6rem;
+    }
+
+    #about-us {
+        padding: 1.1rem 1.5rem;
+    }
+
+    #about-us hr {
+        width: 8.8rem;
+    }
+
+    aside {
+        padding: 2rem 1.5rem 1.1rem;
+    }
+
+    aside img {
+        height: 1rem;
+    }
+
+    aside .card h3 {
+        font-size: 0.5rem;
+    }
+
+    footer{
+        padding: 1.1rem 1.5rem;
+    }
+
+    footer h2{
+        font-size: 0.4rem;
+    }
+
+    footer img {
+        height: 1rem;
+    }
 }
