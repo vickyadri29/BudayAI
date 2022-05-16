@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+  
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 1.1rem 4rem;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+header img{
+    height: 10%;
+    margin-top: 4px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #34888D;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: #00373A;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+#home {
+    padding: 1.7rem 4rem;
+    background: radial-gradient(73.23% 175.27% at -0.9% -101.79%, #FFFFFF 0%, #FBFBFB 100%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#home div {
+    margin: auto 0;
+}
+
+#home div h2 {
+    color: #34888D;
+    font-size: 4.7rem;
+    margin: 0;
+}
+
+#home div p {
+    margin: 0;
+    color: #3C3C3C;
+    font-size: 1.8rem;
+    width: 350px;
+    line-height: 2.5rem;
+}
+
+#home div p span {
+    color: #34888D;
+}
+
+#home img {
+    height: 25rem;
+}
+
+#summary {
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+#summary h2 {
+    color: #34888D;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#summary hr {
+    width: 23rem;
+    border: 1px solid #34888D;
+    border-radius: 22px;
+}
+
+#summary p {
+    color: #3C3C3C;
+    font-size: 1.4rem;
+}
+
+#summary p span {
+    color: #34888D;
+    font-weight: bold;
+}
+
+#summary img {
+    width: 100%;
+}
+
+.wave img {
+    margin: -1.5rem auto;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+#features-app {
+    padding: 2rem 4rem;
+    background: radial-gradient(73.23% 175.27% at -0.9% -101.79%, #FFFFFF 0%, #FBFBFB 100%);
+    text-align: center;
+}
+
+#features-app h2 {
+    color: #34888D;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#features-app hr {
+    width: 16.5rem;
+    border: 1px solid #34888D;
+    border-radius: 22px;
+}
+
+#features-app > p {
+    color: #3C3C3C;
+    font-size: 1.4rem;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+}
+
+.features .card {
+    margin: 20px 50px;
+    width: 300px;
+}
+
+.features .card h3 {
+    color: #34888D;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.features .card p {
+    color: #3C3C3C;
+    font-size: 1.2rem;
+}
+
+#about-us {
+    padding: 2rem 4rem;
+    background-color: #34888D;
+    text-align: center;
+    color: #ffffff;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#about-us hr {
+    width: 17.7rem;
+    border: 1px solid #ffffff;
+    border-radius: 22px;
+}
+
+#about-us p {
+    font-size: 1.2rem;
+}
+
+.team {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team .card {
+    margin: 2rem;
+    padding: 20px;
+    background: #FFFFFF;
+    width: 300px;
+    height: 350px;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 7px 10px rgba(black, 0.5);
+}
+
+
+.team .card:hover {
+    box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
+}
+
+.collect {
+    width: 20px;
+    height: 40px;
+}
+
+#about-us .card h3 {
+    color: #34888D;
+}
+
+#about-us .card p {
+    font-size: 1rem;
+    color: #3C3C3C;
+}
+
+#about-us .card button {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;   
+    border: 1px solid #34888D;
+    background: linear-gradient(262.88deg, #34888D 8.15%, #598AD9 97.79%);
+    border-radius: 70px 9px 9px 9px; 
+    cursor: pointer;   
+}
+
+
+aside {
+    padding: 4rem 4rem 1.7rem;
+    display: flex;
+    justify-content:space-between;
+}
+
+aside img {
+    width: 10%;
+    height: 10%;
+}
+
+aside .card ul{
+    padding: 0;
+    list-style: none;
+}
+
+aside .card h3 {
+    margin: 0;
+    color: #34888D;
+    font-weight: 600;
+}
+
+aside .card ul li {
+    color: #3C3C3C;
+}
+
+aside .card img {
+    margin: 0.7rem 0;
+    width: 20%;
+    height: 19%;
+}
+
+aside .card img:hover {
+  transition:.5s;
+  box-shadow: 2px 2px 5px #888888;
+  border-radius: 50px;
+}
+
+footer .copyright {
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .copyright h2 {
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+footer .copyright img{
+    width: 10%;
+    height: 9%;
+}
+
+@media screen and (max-width: 1024px) {
+    #home {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #home img {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    #home div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home div p {
+        width: 600px;
+        text-align: center;
+        color: #3C3C3C;
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+
+    #summary > p, #features-app > p, #about-us > p {
+        font-size: 1.1rem;
+    }
+
+    .features .card {
+        margin: 20px;
+        width: 500px;
+    }
+
+    .features .card img {
+        height: 8.5rem;
+    }
+
+    .features .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .features .card p {
+        font-size: 1rem;
+    }
+
+
+    .team .card img {
+        height: 5rem;
+    }
+
+    .collect img{
+        display: none;
+    }
+
+    .team .card {
+        margin: 2rem;
+        padding: 0 20px;
+        width: 230px;
+        height: 290px;
+    }
+
+    .team .card h3 {
+        font-size: 1rem;
+    }
+
+    #about-us .card p {
+        font-size: 0.7rem;
+    }
+
+    #about-us .card button {
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;   
+        font-size: 0.7rem;
+        border: 1px solid #34888D;
+        background: linear-gradient(262.88deg, #34888D 8.15%, #598AD9 97.79%);
+        border-radius: 70px 9px 9px 9px; 
+        cursor: pointer;   
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
